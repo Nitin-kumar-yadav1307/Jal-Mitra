@@ -1,0 +1,17 @@
+{
+    "name": "jal-mitra-platform",
+    "version": "1.0.0",
+    "description": "Jal Mitra - Community Based Water Tanker Sharing",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "server": "cd server && npm run dev",
+        "client": "cd client && npm run dev",
+        "build": "cd client && npm install && npm run build && cd ../server && npm install",
+        "install-all": "cd server && npm install && cd ../client && npm install"
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
