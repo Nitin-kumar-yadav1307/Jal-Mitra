@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext'
 import { useSocket } from '../context/SocketContext'
 import { Droplet, Plus, Info, CheckCircle, Clock, Truck, HandHeart, AlertCircle, Phone, IndianRupee, X } from 'lucide-react'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api')
 
 const URGENCY_STYLES = {
   critical: 'bg-red-500/10 text-red-500 border-red-500/20',

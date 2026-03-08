@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext'
 import { useSocket } from '../context/SocketContext'
 import { MessageSquare, Send, Users, Activity } from 'lucide-react'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api')
 
 export default function Chat() {
   const { user } = useAuth()

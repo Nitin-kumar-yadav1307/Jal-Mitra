@@ -4,7 +4,7 @@ import toast from 'react-hot-toast'
 import { useSocket } from '../context/SocketContext'
 import { AlertTriangle, Users, Droplets, Shield, Trash2, Send } from 'lucide-react'
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+const API = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? 'http://localhost:5000/api' : '/api')
 
 const STATUS_COLORS = {
   open: 'bg-blue-500/10 text-blue-400 border border-blue-500/20',
