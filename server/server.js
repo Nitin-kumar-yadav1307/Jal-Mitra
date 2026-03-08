@@ -8,7 +8,7 @@ const { Server } = require('socket.io');
 const path = require('path');
 const initSocket = require('./socket/socket');
 
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 const app = express();
 const server = http.createServer(app);
